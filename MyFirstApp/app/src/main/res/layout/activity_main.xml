@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/plus_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="+"
@@ -17,6 +18,7 @@
         />
 
     <TextView
+        android:id="@+id/result"
         android:text="0"
         android:layout_weight="8"
         android:textSize="100sp"
@@ -29,6 +31,7 @@
         />
 
     <Button
+        android:id="@+id/minus_btn"
         android:text="-"
         android:layout_weight="1"
         android:textSize="20sp"
