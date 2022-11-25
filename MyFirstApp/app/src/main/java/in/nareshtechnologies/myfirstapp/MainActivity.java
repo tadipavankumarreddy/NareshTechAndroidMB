@@ -1,5 +1,6 @@
 package in.nareshtechnologies.myfirstapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -26,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
         minusBtn = findViewById(R.id.minus_btn);
         result = findViewById(R.id.result);
 
+        if(savedInstanceState!=null && savedInstanceState.containsKey("KEY1")){
+            count = savedInstanceState.getInt("KEY1");
+            result.setText(String.valueOf(count));
+        }
+
         plusBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,5 +49,11 @@ public class MainActivity extends AppCompatActivity {
                 result.setText(String.valueOf(count));
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("KEY1",count);
     }
 }
