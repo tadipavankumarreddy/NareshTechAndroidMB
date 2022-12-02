@@ -5,7 +5,7 @@
 
 2. ***Create an application where when the user clicks on  a button, open the ```ACTION_WIFI_SETTINGS``` on the mobile. Use [common intents](https://developer.android.com/guide/components/intents-common#Settings) to do this***
 
-3. ***Create an application where you will be taking the following data from the user. ***
+3. ***Create an application where you will be taking the following data from the user.***
     - Name
     - Age
     - Sex
