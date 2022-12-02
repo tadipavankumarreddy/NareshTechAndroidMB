@@ -1,10 +1,12 @@
 package in.nareshtechnologies.registrationform;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox tel,hin,eng;
     Spinner sp;
     String country;
+    SwitchCompat switchCompat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
         group = findViewById(R.id.rg);
         tel = findViewById(R.id.telugu); hin = findViewById(R.id.hindi); eng = findViewById(R.id.english);
         sp = findViewById(R.id.countries);
+        switchCompat = findViewById(R.id.switch_com);
+        
+        // TODO 6: Dynamically (Run Time) load the data on Spinner
+        String items[] = new String[]{"Uzpekistan","Afghanistan","Soudi","Dubai"};
+
+        ArrayAdapter<String> adapter
+                = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,items);
+
+        sp.setAdapter(adapter);
 
         group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -55,22 +67,29 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 
     public void captureDetails(View view) {
         // TODO 2: Get the name of the person
         String n = name.getText().toString();
-
-        // TODO 4: get the languages known
-        String lk = "";
-        if(tel.isChecked())
-            lk += "telugu"+"\n";
-        if(hin.isChecked())
-            lk += "hindi"+"\n";
-        if(eng.isChecked())
-            lk += "english"+"\n";
+        
+        if(switchCompat.isChecked()){
+            Toast.makeText(this, "Switch ON", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Switch Off", Toast.LENGTH_LONG).show();
+        }
 
         // TODO 3: Display a Toast Message
         Toast.makeText(this, country, Toast.LENGTH_SHORT).show();
+    }
+
+    public void lengthShort(View view) {
+        Toast.makeText(this, "SHORT DURATION", Toast.LENGTH_SHORT).show();
+    }
+
+    public void lengthLong(View view) {
+        Toast.makeText(this, "LONG DURATION", Toast.LENGTH_LONG).show();
     }
 }

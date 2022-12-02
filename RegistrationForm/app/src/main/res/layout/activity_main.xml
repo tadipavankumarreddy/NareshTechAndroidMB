@@ -74,8 +74,13 @@
     <Spinner
         android:id="@+id/countries"
         android:layout_width="match_parent"
-        android:entries="@array/list_countries"
         android:layout_height="50dp"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_com"
+        android:text="Would you like work abroad ?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <Button
         android:layout_width="match_parent"
@@ -83,5 +88,19 @@
         android:onClick="captureDetails"
         android:text="Capture details" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <Button
+            android:text="SHORT"
+            android:onClick="lengthShort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:text="LONG"
+            android:onClick="lengthLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 </LinearLayout>
