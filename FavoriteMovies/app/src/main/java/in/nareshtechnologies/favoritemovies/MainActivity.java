@@ -1,9 +1,14 @@
 package in.nareshtechnologies.favoritemovies;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.graphics.Movie;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recyclerview);
         getDataReady();
+
+        MoviesAdapter ma = new MoviesAdapter(this,movie_posters,movie_names,movie_actors);
+        recyclerView.setAdapter(ma);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 
     private void getDataReady() {
