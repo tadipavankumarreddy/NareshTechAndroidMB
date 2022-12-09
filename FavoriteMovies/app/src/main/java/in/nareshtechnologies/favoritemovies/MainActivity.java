@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
     // TODO 1: (Completed) Get the data ready
     // TODO 2: (Completed) Design how you want to display each item on RV
     // TODO 3: (Completed) Add & Connect to RV (RecyclerView)
-    // TODO 4: Create an Adapter along with View Holder
-    // TODO 5: Set the Adapter on RV
-    // TODO 6: set the Layout Manager (Linear, Grid, Staggered)
+    // TODO 4: (Completed) Create an Adapter along with View Holder
+    // TODO 5: (Completed) Set the Adapter on RV
+    // TODO 6: (Completed) set the Layout Manager (Linear, Grid, Staggered)
 
 }
