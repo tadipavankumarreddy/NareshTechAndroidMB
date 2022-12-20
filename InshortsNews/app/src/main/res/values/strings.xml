@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Inshorts News</string>
+    <string-array name="categories">
+        <item>all</item>
+        <item>national</item>
+        <item>business</item>
+        <item>sports</item>
+        <item>world</item>
+        <item>politics</item>
+        <item>technology</item>
+        <item>startup</item>
+        <item>entertainment</item>
+        <item>miscellaneous</item>
+    </string-array>
 </resources>

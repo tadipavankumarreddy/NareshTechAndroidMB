@@ -2,7 +2,9 @@
 package in.nareshtechnologies.inshortsnews;
 
 
-public class Datum {
+import java.io.Serializable;
+
+public class Datum implements Serializable {
 
     private String author;
     private String content;
