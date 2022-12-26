@@ -62,7 +62,7 @@ UPDATE students_data set student_name = "TPK Reddy" where student_id = 1;
 
 ###### Delete Command
 ```SQL
-UPDATE students_data set student_name = "TPK Reddy" where student_id = 1;
+DELETE from students_data where student_id = 1;
 ```
 
 
