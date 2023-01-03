@@ -2,6 +2,7 @@ package in.nareshtechnologies.scoretrackerjetpack;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -23,16 +24,19 @@ public class MainActivity extends AppCompatActivity {
 
         mvm = new ViewModelProvider(this).get(MainViewModel.class);
 
-        binding.textView.setText(String.valueOf(mvm.count));
+        mvm.count.observe(this, new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                binding.textView.setText(String.valueOf(mvm.count.getValue()));
+            }
+        });
 
         binding.button.setOnClickListener(view -> {
             mvm.increment();
-            binding.textView.setText(String.valueOf(mvm.count));
         });
 
         binding.button2.setOnClickListener(view -> {
             mvm.decrement();
-            binding.textView.setText(String.valueOf(mvm.count));
         });
     }
 }

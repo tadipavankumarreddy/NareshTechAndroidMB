@@ -2,20 +2,22 @@ package in.nareshtechnologies.scoretrackerjetpack;
 
 import android.util.Log;
 
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class MainViewModel extends ViewModel {
-    int count;
+    MutableLiveData<Integer> count;
     public MainViewModel() {
-        count = 0;
+        count = new MutableLiveData<>();
+        count.setValue(0);
     }
 
     public void increment(){
-        count++;
+        count.setValue(count.getValue() + 1);
     }
 
     public void decrement(){
-        count--;
+        count.setValue(count.getValue() - 1);
     }
 
     // onCleared() method is encountered when the view model is about to be destroyed
