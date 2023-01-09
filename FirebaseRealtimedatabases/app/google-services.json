@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "875047976353",
+    "project_id": "fir-explore-5484c",
+    "storage_bucket": "fir-explore-5484c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875047976353:android:0f613875ab8ddfb2e49fe0",
+        "android_client_info": {
+          "package_name": "in.nareshtechnologies.firebaserealtimedatabases"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875047976353-hbebhpka0hkncksmmpga3b4kmfi8k3jr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYK5ARtK7ZdR-kCkK2PKLxnebQFfLV7Vw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875047976353-hbebhpka0hkncksmmpga3b4kmfi8k3jr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
